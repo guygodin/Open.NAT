@@ -30,7 +30,6 @@ namespace Open.Nat
 		~Finalizer() 
 		{
 			NatDiscoverer.TraceSource.LogInfo("Closing ports opened in this session");
-			NatDiscoverer.RenewTimer.Dispose();
 			NatDiscoverer.ReleaseSessionMappings();
 		}
 	}
